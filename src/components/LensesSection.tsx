@@ -28,7 +28,7 @@ const LensesSection = () => {
             <div className="pt-4">
               <a
                 href="#"
-                className="inline-block bg-[#1A1A1A] text-white font-bold px-10 py-4 rounded-full hover:bg-primary/90 hover:scale-105 transition-all shadow-xl text-sm uppercase tracking-widest"
+                className="inline-block bg-[#0A1490] text-white font-bold px-10 py-4 rounded-full hover:bg-primary/90 hover:scale-105 transition-all shadow-xl text-sm uppercase tracking-widest"
               >
                 Ver coleção
               </a>
