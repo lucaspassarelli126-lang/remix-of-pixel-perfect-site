@@ -49,7 +49,7 @@ const LensesSection = () => {
               {/* Modern Badge */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl hidden lg:block animate-bounce-slow">
                 <p className="text-[#1A1A1A] font-bold text-lg">100% Autêntico</p>
-                <p className="text-xs text-muted-foreground">Coleção 2024</p>
+                <p className="text-xs text-muted-foreground">Coleção 2026</p>
               </div>
             </div>
           </div>
