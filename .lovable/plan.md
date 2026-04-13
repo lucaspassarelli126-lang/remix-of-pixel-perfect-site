@@ -1,12 +1,13 @@
 
 
-## Plano: Reduzir proporção dos cards de faixa de preço
+## Plano: Atualizar seção de Lentes de Contato
 
-O aspect ratio atual é `aspect-[4/5]` (retrato alto). Vou reduzir para que os cards fiquem mais compactos e proporcionais ao texto.
+### Alterações
 
-### Alteração
-
-**`src/components/PriceRangeSection.tsx`** (linha 23):
-- Trocar `aspect-[4/5]` por `aspect-[5/4]` (paisagem/mais largo que alto) para que o card se ajuste melhor ao conteúdo textual
-- Reduzir padding de `p-4` para `p-3` para manter o texto bem enquadrado
+1. **Copiar imagem** `user-uploads://Design_sem_nome_2.png` para `src/assets/lenses-model.png`
+2. **Atualizar `LensesSection.tsx`**:
+   - Substituir os círculos concêntricos com emoji de olho pela imagem da modelo usando óculos
+   - Trocar o tema de "Lentes de Contato" para algo como "Encontre o óculos perfeito para você" — focando em estilo e personalidade
+   - Manter layout flex row/column responsivo
+   - Imagem com `rounded-2xl` e `object-cover` para visual elegante
 
