@@ -1,25 +1,30 @@
 
 
-# Plano: Adicionar imagens do banner para desktop e mobile
+## Plano: Substituir banners do carrossel com imagens desktop/mobile
 
-## O que será feito
-Adicionar as duas imagens enviadas ao carrossel hero banner — a imagem wide (1920x430) para desktop e a imagem mais quadrada (1080x420) para mobile. Cada slide mostrará a imagem correta conforme o tamanho da tela.
+Você enviou 3 pares de imagens (desktop 1920x430 e mobile 1080x420). Vou aplicá-las nos 3 slides do carrossel hero.
 
-## Passos
+### Mapeamento dos banners
 
-1. **Copiar as imagens** para `src/assets/`:
-   - `banner-desktop.png` — imagem 1920x430
-   - `banner-mobile.png` — imagem 1080x420
+| Slide | Desktop (1920x430) | Mobile (1080x420) |
+|-------|--------------------|--------------------|
+| 1 - Glasses Catálogos | `Black_and_White_...1920_x_430_px.png` | `Black_and_White_...1080_x_420_px.png` |
+| 2 - Gente que ama | `Gente_que_ama_Post_Instagram.png` | `Gente_que_ama_...1080_x_420_px.png` |
+| 3 - Óculos de sol | `Post_para_instagram_...1920_x_430_px.png` | `Post_para_instagram_...1080_x_420_px.png` |
+
+### Passos
+
+1. **Copiar as 6 imagens** para `src/assets/banners/` com nomes limpos (`banner1-desktop.png`, `banner1-mobile.png`, etc.)
 
 2. **Atualizar `HeroBanner.tsx`**:
-   - Importar as duas imagens como módulos ES6
-   - Adicionar campos `desktopImage` e `mobileImage` ao primeiro banner do array
-   - No render, quando o banner tiver imagem, exibir com `<picture>` ou classes `hidden md:block` / `block md:hidden` para alternar entre desktop e mobile
-   - A imagem ocupa 100% da largura do slide como background/cover
-   - Os outros banners continuam com o layout de texto atual
+   - Importar as 6 imagens como módulos ES6
+   - Remover o layout de texto/CTA atual dos banners
+   - Cada slide renderiza duas `<img>`: uma com `hidden md:block` (desktop) e outra com `block md:hidden` (mobile)
+   - Imagens com `w-full h-auto object-cover` para preencher o slide perfeitamente
+   - Manter setas de navegação e dots por cima das imagens
 
-## Detalhes técnicos
-- Usar `<img>` com `object-cover` e `w-full` para preencher o slide
-- Classes responsivas: `hidden md:block` para desktop, `block md:hidden` para mobile
-- Manter setas de navegação e dots por cima da imagem
+### Detalhes técnicos
+- Aspect ratio fixo via container: desktop `aspect-[1920/430]`, mobile `aspect-[1080/420]` para garantir enquadramento perfeito sem corte
+- `object-cover` + `w-full h-full` nas imagens dentro do container com aspect ratio
+- Navegação (setas + dots) mantida com `z-20` sobre as imagens
 
