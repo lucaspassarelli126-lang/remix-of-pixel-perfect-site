@@ -20,7 +20,7 @@ const PriceRangeSection = () => {
               href="#"
               className="flex flex-col items-center gap-3 group"
             >
-              <div className="<div className="w-full aspect-[5/4] bg-[#1a3a8a] rounded-md flex flex-col items-start justify-end p-3 group-hover:scale-105 transition-transform shadow-md relative overflow-hidden">
+              <div className="w-full aspect-[5/4] bg-[#1a3a8a] rounded-md flex flex-col items-start justify-end p-3 group-hover:scale-105 transition-transform shadow-md relative overflow-hidden">
                 <span className="text-[#d4a017] text-xs font-semibold uppercase tracking-wider">
                   Até
                 </span>
