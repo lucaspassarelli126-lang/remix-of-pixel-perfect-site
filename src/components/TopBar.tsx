@@ -16,7 +16,7 @@ const TopBar = () => {
           </a>
           <a href="#" className="flex items-center gap-1 hover:underline">
             <Phone className="h-3 w-3" />
-            <span>Central de Atendimento</span>
+            <span>(19) 9 9586-4431</span>
           </a>
         </div>
       </div>

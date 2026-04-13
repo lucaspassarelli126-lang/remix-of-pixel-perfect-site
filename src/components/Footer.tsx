@@ -46,11 +46,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 flex-shrink-0" />
-                <span>Seg a Sex: 8h às 20h | Sáb: 8h às 14h</span>
+                <span>Seg a Sex: 09:00 às 18:00 | Sáb: 09:00 às 13:00</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>0800 000 0000</span>
+                <span>(19) 99586-4431</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
@@ -78,7 +78,7 @@ const Footer = () => {
 
         <div className="border-t border-background/10 mt-6 pt-6 text-center text-[11px] text-background/50 space-y-1">
           <p>VISÃO TOTAL ÓTICA LTDA - CNPJ: 00.000.000/0001-00</p>
-          <p>Av. Exemplo, 1000 - Belo Horizonte/MG - CEP 30000-000</p>
+          <p>Av. Carlos Lacerda, 1498 - Parque Res. Vila União, Campinas - SP, 13060-497</p>
           <p>© {new Date().getFullYear()} Visão Total Ótica. Todos os direitos reservados.</p>
         </div>
       </div>
