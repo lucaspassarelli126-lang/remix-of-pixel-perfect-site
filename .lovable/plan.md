@@ -1,34 +1,32 @@
 
 
-## Plano: Gerar imagens de óculos para os cards de produto
+## Plano: Gerar logos das marcas para a seção "Explore por Marcas"
 
-As imagens atuais dos produtos vêm de URLs externas (oticasdiniz.vtexassets.com) que provavelmente estão quebradas. Vou gerar 10 imagens de óculos usando IA e salvá-las como assets locais.
+Atualmente cada marca mostra apenas uma letra dentro de um círculo. Vou gerar imagens de logo para cada marca e atualizar o componente para exibi-las.
 
-### Produtos que precisam de imagens (10 total)
+### Marcas (7 logos)
 
-**Queridinos (6):**
-1. Óculos de Grau Dii Collection 2215 — armação retangular clássica
-2. Óculos de Grau Hit Eyewear A01 — armação moderna
-3. Óculos de Sol Ray-Ban Justin RB4165L — sol retangular preto
-4. Óculos de Grau Guess GU2937 — armação feminina elegante
-5. Óculos de Sol Dii Collection SL2001 — sol aviador
-6. Óculos de Sol Prada PR 17WS — sol cat-eye luxo
-
-**Ray-Ban (4):**
-7. Ray-Ban Aviador RB3025L — aviador dourado clássico
-8. Ray-Ban Wayfarer RB2140 — wayfarer preto
-9. Ray-Ban Clubmaster RB3016L — clubmaster
-10. Ray-Ban Erika RB4171L — redondo feminino
+| Marca | Estilo do logo |
+|-------|---------------|
+| Prada | Logo wordmark clássico preto |
+| Ray-Ban | Logo wordmark vermelho/branco |
+| Vogue | Logo wordmark elegante |
+| Miu Miu | Logo wordmark minimalista |
+| Guess | Logo triângulo invertido |
+| Dii Collection | Logo wordmark clean |
+| Hit Eyewear | Logo wordmark moderno |
 
 ### Passos
 
-1. **Gerar 10 imagens** via API Gemini (modelo de geração de imagem), cada uma mostrando o óculos em fundo branco limpo, estilo e-commerce profissional — similar à referência enviada
-2. **Salvar as imagens** em `src/assets/products/` com nomes como `product-1.png`, `product-rb1.png`, etc.
-3. **Atualizar `src/data/products.ts`** para importar as imagens locais ao invés das URLs externas
-4. **Atualizar `ProductCard.tsx`** se necessário para garantir que as imagens renderizam corretamente
+1. **Gerar 7 logos** via API Gemini — cada logo em fundo transparente/branco, estilo wordmark profissional, adequado para uso em círculos
+2. **Salvar** em `src/assets/brands/` como `prada.png`, `rayban.png`, etc.
+3. **Atualizar `BrandsSection.tsx`**:
+   - Importar as 7 imagens
+   - Substituir a letra por `<img>` dentro do círculo
+   - Manter o layout circular com hover e responsividade existentes
+   - Fundo branco nos círculos para contraste com os logos
 
 ### Detalhes técnicos
-- Imagens geradas com prompt específico por modelo: fundo branco, óculos centralizado, estilo catálogo profissional
-- Imports ES6 no `products.ts` para cada imagem
-- Tipo `imageUrl` continuará como `string` (funciona com imports ES6)
+- Imagens com `object-contain` + padding interno para os logos ficarem bem enquadrados dentro dos círculos
+- Círculos mantêm `w-16 h-16 md:w-20 md:h-20` com `bg-white` e borda sutil
 
