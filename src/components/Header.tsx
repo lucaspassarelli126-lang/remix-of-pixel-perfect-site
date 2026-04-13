@@ -16,15 +16,19 @@ const Header = () => {
   return (
     <header className={`w-full bg-[#0A1490] sticky top-0 z-50 transition-all duration-300 shadow-md ${isScrolled ? "py-2" : "py-3 md:py-4"}`}>
       <div className="container flex items-center justify-between gap-4">
-        <a href="/" className="flex-shrink-0">
-          <img 
-            src={logo} 
-            alt="Visão Total Ótica" 
-            className={`transition-all duration-300 object-contain w-auto ${isScrolled ? "h-10 md:h-12" : "h-12 md:h-16"}`}
-          />
-        </a>
+        {/* Lado Esquerdo: Logo */}
+        <div className="flex-1">
+          <a href="/" className="inline-block">
+            <img 
+              src={logo} 
+              alt="Visão Total Ótica" 
+              className={`transition-all duration-300 object-contain w-auto ${isScrolled ? "h-10 md:h-12" : "h-12 md:h-16"}`}
+            />
+          </a>
+        </div>
 
-        <div className="flex-1 max-w-xl hidden md:flex">
+        {/* Centro: Barra de Pesquisa */}
+        <div className="flex-[2] max-w-xl hidden md:flex justify-center">
           <div className="relative w-full">
             <input
               type="text"
@@ -37,14 +41,17 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-3 md:gap-5">
-          <a href="#" className="flex flex-col items-center text-white hover:opacity-80 transition-opacity group">
-            <div className="relative">
-              <Heart className="h-6 w-6 group-hover:fill-white transition-all" />
-              <span className="absolute -top-1 -right-1 bg-red-500 text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-            </div>
-            <span className="text-[10px] mt-0.5 hidden md:block uppercase font-bold tracking-wider">Favoritos</span>
-          </a>
+        {/* Lado Direito: Favoritos */}
+        <div className="flex-1 flex justify-end">
+          <div className="flex items-center gap-3 md:gap-5">
+            <a href="#" className="flex flex-col items-center text-white hover:opacity-80 transition-opacity group">
+              <div className="relative">
+                <Heart className="h-6 w-6 group-hover:fill-white transition-all" />
+                <span className="absolute -top-1 -right-1 bg-red-500 text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+              </div>
+              <span className="text-[10px] mt-0.5 hidden md:block uppercase font-bold tracking-wider">Favoritos</span>
+            </a>
+          </div>
         </div>
       </div>
 
