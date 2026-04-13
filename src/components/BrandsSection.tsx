@@ -1,11 +1,19 @@
+import pradaLogo from "@/assets/brands/prada.png";
+import raybanLogo from "@/assets/brands/rayban.png";
+import vogueLogo from "@/assets/brands/vogue.png";
+import miumiuLogo from "@/assets/brands/miumiu.png";
+import guessLogo from "@/assets/brands/guess.png";
+import diiLogo from "@/assets/brands/dii-collection.png";
+import hitLogo from "@/assets/brands/hit-eyewear.png";
+
 const brandItems = [
-  { name: "Prada", letter: "P", bg: "bg-foreground" },
-  { name: "Ray-Ban", letter: "R", bg: "bg-primary" },
-  { name: "Vogue", letter: "V", bg: "bg-foreground" },
-  { name: "Miu Miu", letter: "M", bg: "bg-primary" },
-  { name: "Guess", letter: "G", bg: "bg-muted-foreground" },
-  { name: "Dii Collection", letter: "D", bg: "bg-foreground" },
-  { name: "Hit Eyewear", letter: "H", bg: "bg-primary" },
+  { name: "Prada", logo: pradaLogo },
+  { name: "Ray-Ban", logo: raybanLogo },
+  { name: "Vogue", logo: vogueLogo },
+  { name: "Miu Miu", logo: miumiuLogo },
+  { name: "Guess", logo: guessLogo },
+  { name: "Dii Collection", logo: diiLogo },
+  { name: "Hit Eyewear", logo: hitLogo },
 ];
 
 const BrandsSection = () => {
@@ -18,8 +26,15 @@ const BrandsSection = () => {
         <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
           {brandItems.map((brand) => (
             <a key={brand.name} href="#" className="flex flex-col items-center gap-2 group">
-              <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full ${brand.bg} text-primary-foreground flex items-center justify-center text-2xl md:text-3xl font-bold group-hover:scale-110 transition-transform shadow-md`}>
-                {brand.letter}
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border border-border flex items-center justify-center p-2.5 group-hover:scale-110 transition-transform shadow-md overflow-hidden">
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                  width={80}
+                  height={80}
+                />
               </div>
               <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">
                 {brand.name}
