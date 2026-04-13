@@ -1,30 +1,34 @@
 
 
-## Plano: Substituir banners do carrossel com imagens desktop/mobile
+## Plano: Gerar imagens de óculos para os cards de produto
 
-Você enviou 3 pares de imagens (desktop 1920x430 e mobile 1080x420). Vou aplicá-las nos 3 slides do carrossel hero.
+As imagens atuais dos produtos vêm de URLs externas (oticasdiniz.vtexassets.com) que provavelmente estão quebradas. Vou gerar 10 imagens de óculos usando IA e salvá-las como assets locais.
 
-### Mapeamento dos banners
+### Produtos que precisam de imagens (10 total)
 
-| Slide | Desktop (1920x430) | Mobile (1080x420) |
-|-------|--------------------|--------------------|
-| 1 - Glasses Catálogos | `Black_and_White_...1920_x_430_px.png` | `Black_and_White_...1080_x_420_px.png` |
-| 2 - Gente que ama | `Gente_que_ama_Post_Instagram.png` | `Gente_que_ama_...1080_x_420_px.png` |
-| 3 - Óculos de sol | `Post_para_instagram_...1920_x_430_px.png` | `Post_para_instagram_...1080_x_420_px.png` |
+**Queridinos (6):**
+1. Óculos de Grau Dii Collection 2215 — armação retangular clássica
+2. Óculos de Grau Hit Eyewear A01 — armação moderna
+3. Óculos de Sol Ray-Ban Justin RB4165L — sol retangular preto
+4. Óculos de Grau Guess GU2937 — armação feminina elegante
+5. Óculos de Sol Dii Collection SL2001 — sol aviador
+6. Óculos de Sol Prada PR 17WS — sol cat-eye luxo
+
+**Ray-Ban (4):**
+7. Ray-Ban Aviador RB3025L — aviador dourado clássico
+8. Ray-Ban Wayfarer RB2140 — wayfarer preto
+9. Ray-Ban Clubmaster RB3016L — clubmaster
+10. Ray-Ban Erika RB4171L — redondo feminino
 
 ### Passos
 
-1. **Copiar as 6 imagens** para `src/assets/banners/` com nomes limpos (`banner1-desktop.png`, `banner1-mobile.png`, etc.)
-
-2. **Atualizar `HeroBanner.tsx`**:
-   - Importar as 6 imagens como módulos ES6
-   - Remover o layout de texto/CTA atual dos banners
-   - Cada slide renderiza duas `<img>`: uma com `hidden md:block` (desktop) e outra com `block md:hidden` (mobile)
-   - Imagens com `w-full h-auto object-cover` para preencher o slide perfeitamente
-   - Manter setas de navegação e dots por cima das imagens
+1. **Gerar 10 imagens** via API Gemini (modelo de geração de imagem), cada uma mostrando o óculos em fundo branco limpo, estilo e-commerce profissional — similar à referência enviada
+2. **Salvar as imagens** em `src/assets/products/` com nomes como `product-1.png`, `product-rb1.png`, etc.
+3. **Atualizar `src/data/products.ts`** para importar as imagens locais ao invés das URLs externas
+4. **Atualizar `ProductCard.tsx`** se necessário para garantir que as imagens renderizam corretamente
 
 ### Detalhes técnicos
-- Aspect ratio fixo via container: desktop `aspect-[1920/430]`, mobile `aspect-[1080/420]` para garantir enquadramento perfeito sem corte
-- `object-cover` + `w-full h-full` nas imagens dentro do container com aspect ratio
-- Navegação (setas + dots) mantida com `z-20` sobre as imagens
+- Imagens geradas com prompt específico por modelo: fundo branco, óculos centralizado, estilo catálogo profissional
+- Imports ES6 no `products.ts` para cada imagem
+- Tipo `imageUrl` continuará como `string` (funciona com imports ES6)
 
