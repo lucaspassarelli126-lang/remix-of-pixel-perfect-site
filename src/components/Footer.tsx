@@ -46,7 +46,7 @@ const Footer = () => {
   ];
 
   const description = (
-    <div className="space-y-4">
+    <div className="space-y-4 text-background/70">
       <p className="text-sm">Especialistas em saúde visual e as melhores marcas de óculos em Campinas.</p>
       <div className="space-y-2 mt-4 text-xs">
         <div className="flex items-start gap-2">
@@ -85,7 +85,5 @@ const Footer = () => {
     />
   );
 };
-
-export default Footer;
 
 export default Footer;
