@@ -1,3 +1,14 @@
+import product1Img from "@/assets/products/product-1.png";
+import product2Img from "@/assets/products/product-2.png";
+import product3Img from "@/assets/products/product-3.png";
+import product4Img from "@/assets/products/product-4.png";
+import product5Img from "@/assets/products/product-5.png";
+import product6Img from "@/assets/products/product-6.png";
+import productRb1Img from "@/assets/products/product-rb1.png";
+import productRb2Img from "@/assets/products/product-rb2.png";
+import productRb3Img from "@/assets/products/product-rb3.png";
+import productRb4Img from "@/assets/products/product-rb4.png";
+
 export interface Product {
   id: string;
   name: string;
@@ -17,7 +28,7 @@ export const queridinosProducts: Product[] = [
     id: "1",
     name: "Óculos de Grau Dii Collection 2215",
     brand: "Dii Collection",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/304889/oculos-de-grau-dii-collection-2215-c3-52.jpg",
+    imageUrl: product1Img,
     originalPrice: 299.99,
     discountPercent: 40,
     pixPrice: 161.99,
@@ -30,7 +41,7 @@ export const queridinosProducts: Product[] = [
     id: "2",
     name: "Óculos de Grau Hit Eyewear A01",
     brand: "Hit Eyewear",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/307273/oculos-de-grau-hit-eyewear-a01-c2-51.jpg",
+    imageUrl: product2Img,
     originalPrice: 249.99,
     discountPercent: 35,
     pixPrice: 145.99,
@@ -43,7 +54,7 @@ export const queridinosProducts: Product[] = [
     id: "3",
     name: "Óculos de Sol Ray-Ban Justin RB4165L",
     brand: "Ray-Ban",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/286994/oculos-de-sol-ray-ban-justin-rb4165l-622-55.jpg",
+    imageUrl: product3Img,
     originalPrice: 750.00,
     discountPercent: 20,
     pixPrice: 540.00,
@@ -56,7 +67,7 @@ export const queridinosProducts: Product[] = [
     id: "4",
     name: "Óculos de Grau Guess GU2937",
     brand: "Guess",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/309508/oculos-de-grau-guess-gu2937-005-54.jpg",
+    imageUrl: product4Img,
     originalPrice: 599.99,
     discountPercent: 30,
     pixPrice: 377.99,
@@ -69,7 +80,7 @@ export const queridinosProducts: Product[] = [
     id: "5",
     name: "Óculos de Sol Dii Collection SL2001",
     brand: "Dii Collection",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/305120/oculos-de-sol-dii-collection-sl2001-c1-55.jpg",
+    imageUrl: product5Img,
     originalPrice: 199.99,
     discountPercent: 45,
     pixPrice: 98.99,
@@ -82,7 +93,7 @@ export const queridinosProducts: Product[] = [
     id: "6",
     name: "Óculos de Sol Prada PR 17WS",
     brand: "Prada",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/298737/oculos-de-sol-prada-pr-17ws-1ab5s0-49.jpg",
+    imageUrl: product6Img,
     originalPrice: 1890.00,
     discountPercent: 15,
     pixPrice: 1444.50,
@@ -98,7 +109,7 @@ export const rayBanProducts: Product[] = [
     id: "rb1",
     name: "Óculos de Sol Ray-Ban Aviador RB3025L",
     brand: "Ray-Ban",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/286753/oculos-de-sol-ray-ban-aviador-rb3025l-001-58.jpg",
+    imageUrl: productRb1Img,
     originalPrice: 850.00,
     discountPercent: 20,
     pixPrice: 612.00,
@@ -111,7 +122,7 @@ export const rayBanProducts: Product[] = [
     id: "rb2",
     name: "Óculos de Sol Ray-Ban Wayfarer RB2140",
     brand: "Ray-Ban",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/286808/oculos-de-sol-ray-ban-wayfarer-rb2140-901-54.jpg",
+    imageUrl: productRb2Img,
     originalPrice: 790.00,
     discountPercent: 18,
     pixPrice: 582.60,
@@ -124,7 +135,7 @@ export const rayBanProducts: Product[] = [
     id: "rb3",
     name: "Óculos de Sol Ray-Ban Clubmaster RB3016L",
     brand: "Ray-Ban",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/286824/oculos-de-sol-ray-ban-clubmaster-rb3016l-w0365-51.jpg",
+    imageUrl: productRb3Img,
     originalPrice: 820.00,
     discountPercent: 22,
     pixPrice: 575.64,
@@ -137,7 +148,7 @@ export const rayBanProducts: Product[] = [
     id: "rb4",
     name: "Óculos de Sol Ray-Ban Erika RB4171L",
     brand: "Ray-Ban",
-    imageUrl: "https://oticasdiniz.vtexassets.com/arquivos/ids/286860/oculos-de-sol-ray-ban-erika-rb4171l-622-8g-54.jpg",
+    imageUrl: productRb4Img,
     originalPrice: 680.00,
     discountPercent: 25,
     pixPrice: 459.00,
