@@ -15,13 +15,15 @@ import { queridinosProducts, rayBanProducts } from "@/data/products";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <TopBar />
+    <div className="min-h-screen flex flex-col pt-[32px] md:pt-[40px]">
+      <div className="fixed top-0 left-0 right-0 z-[60]">
+        <TopBar />
+      </div>
       <Header />
-      <CategoryNav />
 
       <main className="flex-1">
         <HeroBanner />
+        <CategoryNav />
 
         <ProductCarousel
           title="Os Queridinhos do Momento"
