@@ -3,28 +3,17 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import banner1Desktop from "@/assets/banners/banner1-desktop.png";
+import banner1Mobile from "@/assets/banners/banner1-mobile.png";
+import banner2Desktop from "@/assets/banners/banner2-desktop.png";
+import banner2Mobile from "@/assets/banners/banner2-mobile.png";
+import banner3Desktop from "@/assets/banners/banner3-desktop.png";
+import banner3Mobile from "@/assets/banners/banner3-mobile.png";
+
 const banners = [
-  {
-    id: 1,
-    title: "COMPRE E GANHE",
-    subtitle: "Na compra de qualquer óculos de grau, ganhe uma armação solar!",
-    bgClass: "bg-primary",
-    cta: "Aproveite",
-  },
-  {
-    id: 2,
-    title: "RAY-BAN",
-    subtitle: "Autenticidade que atravessa o tempo",
-    bgClass: "bg-foreground",
-    cta: "Confira",
-  },
-  {
-    id: 3,
-    title: "LENTES DE CONTATO",
-    subtitle: "As melhores marcas com os melhores preços",
-    bgClass: "bg-primary",
-    cta: "Compre agora",
-  },
+  { id: 1, desktop: banner1Desktop, mobile: banner1Mobile, alt: "Catálogo de Óculos" },
+  { id: 2, desktop: banner2Desktop, mobile: banner2Mobile, alt: "Gente que ama" },
+  { id: 3, desktop: banner3Desktop, mobile: banner3Mobile, alt: "Promoção óculos de sol" },
 ];
 
 const HeroBanner = () => {
@@ -53,20 +42,21 @@ const HeroBanner = () => {
         <div className="flex">
           {banners.map((banner) => (
             <div key={banner.id} className="flex-[0_0_100%] min-w-0">
-              <div className={`${banner.bgClass} text-primary-foreground relative overflow-hidden`}>
-                <div className="container flex items-center min-h-[300px] md:min-h-[420px] py-12 relative z-10">
-                  <div className="max-w-lg">
-                    <h2 className="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">{banner.title}</h2>
-                    <p className="text-base md:text-lg mb-6 opacity-90">{banner.subtitle}</p>
-                    <button className="bg-background text-foreground font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity text-sm uppercase tracking-wider">
-                      {banner.cta}
-                    </button>
-                  </div>
-                </div>
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-10 right-10 w-64 h-64 rounded-full border-[30px] border-current" />
-                  <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full border-[40px] border-current" />
-                </div>
+              {/* Desktop */}
+              <div className="hidden md:block aspect-[1920/430]">
+                <img
+                  src={banner.desktop}
+                  alt={banner.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Mobile */}
+              <div className="block md:hidden aspect-[1080/420]">
+                <img
+                  src={banner.mobile}
+                  alt={banner.alt}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           ))}
