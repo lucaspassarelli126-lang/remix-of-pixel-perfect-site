@@ -7,26 +7,20 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header 
-      className={`w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "fixed top-0 bg-[#0A1490] shadow-lg py-2" 
-          : "absolute top-[32px] md:top-[40px] bg-transparent py-4"
-      }`}
-    >
+    <header className={`w-full bg-[#0A1490] sticky top-0 z-50 transition-all duration-300 shadow-md ${isScrolled ? "py-2" : "py-3 md:py-4"}`}>
       <div className="container flex items-center justify-between gap-4">
         <a href="/" className="flex-shrink-0">
           <img 
             src={logo} 
             alt="Visão Total Ótica" 
-            className={`transition-all duration-300 object-contain w-auto ${isScrolled ? "h-10 md:h-12" : "h-12 md:h-20"}`}
+            className={`transition-all duration-300 object-contain w-auto ${isScrolled ? "h-10 md:h-12" : "h-12 md:h-16"}`}
           />
         </a>
 
@@ -35,9 +29,7 @@ const Header = () => {
             <input
               type="text"
               placeholder="O que você está procurando?"
-              className={`w-full border-none rounded-full py-2.5 px-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors ${
-                isScrolled ? "bg-white/20" : "bg-white/10"
-              } text-white placeholder:text-white/70`}
+              className="w-full border-none rounded-full py-2.5 px-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 bg-white/20 text-white placeholder:text-white/70"
             />
             <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-white text-[#0A1490] rounded-full p-2 hover:scale-105 transition-transform">
               <Search className="h-4 w-4" />
@@ -56,14 +48,14 @@ const Header = () => {
         </div>
       </div>
 
-      <div className={`md:hidden px-4 pt-4 transition-all ${isScrolled ? "hidden" : "block"}`}>
-        <div className="relative w-full">
+      <div className="md:hidden px-4 pb-3">
+        <div className="relative w-full px-2">
           <input
             type="text"
             placeholder="O que você está procurando?"
-            className="w-full border-none rounded-full py-2.5 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 bg-white/10 text-white placeholder:text-white/70"
+            className="w-full border-none rounded-full py-2.5 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 bg-white/20 text-white placeholder:text-white/70"
           />
-          <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-white text-[#0A1490] rounded-full p-2">
+          <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-[#0A1490] rounded-full p-2">
             <Search className="h-4 w-4" />
           </button>
         </div>
