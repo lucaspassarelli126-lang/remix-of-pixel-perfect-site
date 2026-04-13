@@ -1,11 +1,16 @@
 import { Search, Heart } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
-      <div className="container flex items-center justify-between py-3 gap-4">
+      <div className="container flex items-center justify-between py-2 gap-4">
         <a href="/" className="flex-shrink-0">
-          <span className="text-2xl font-bold text-primary tracking-tight">VISÃO TOTAL ÓTICA</span>
+          <img 
+            src={logo} 
+            alt="Visão Total Ótica" 
+            className="h-10 md:h-14 w-auto object-contain brightness-0 invert" 
+          />
         </a>
 
         <div className="flex-1 max-w-xl hidden md:flex">
