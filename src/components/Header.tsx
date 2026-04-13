@@ -1,11 +1,11 @@
-import { Search, User, Heart, ShoppingBag } from "lucide-react";
+import { Search, Heart } from "lucide-react";
 
 const Header = () => {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="container flex items-center justify-between py-3 gap-4">
         <a href="/" className="flex-shrink-0">
-          <span className="text-2xl font-bold text-primary tracking-tight">ÓTICAS DINIZ</span>
+          <span className="text-2xl font-bold text-primary tracking-tight">VISÃO TOTAL ÓTICA</span>
         </a>
 
         <div className="flex-1 max-w-xl hidden md:flex">
@@ -23,17 +23,8 @@ const Header = () => {
 
         <div className="flex items-center gap-3 md:gap-5">
           <a href="#" className="flex flex-col items-center text-foreground hover:text-primary transition-colors">
-            <User className="h-5 w-5" />
-            <span className="text-[10px] mt-0.5 hidden md:block">Minha Conta</span>
-          </a>
-          <a href="#" className="flex flex-col items-center text-foreground hover:text-primary transition-colors">
             <Heart className="h-5 w-5" />
             <span className="text-[10px] mt-0.5 hidden md:block">Favoritos</span>
-          </a>
-          <a href="#" className="flex flex-col items-center text-foreground hover:text-primary transition-colors relative">
-            <ShoppingBag className="h-5 w-5" />
-            <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground text-[9px] rounded-full w-4 h-4 flex items-center justify-center font-bold">0</span>
-            <span className="text-[10px] mt-0.5 hidden md:block">Carrinho</span>
           </a>
         </div>
       </div>

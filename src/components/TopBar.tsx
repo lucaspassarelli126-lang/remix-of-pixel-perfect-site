@@ -7,7 +7,7 @@ const TopBar = () => {
         <div className="flex items-center gap-4">
           <a href="#" className="flex items-center gap-1 hover:underline">
             <MapPin className="h-3 w-3" />
-            <span>Encontre uma Diniz</span>
+            <span>Encontre uma loja</span>
           </a>
         </div>
         <div className="flex items-center gap-4">
