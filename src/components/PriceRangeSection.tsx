@@ -1,24 +1,40 @@
-import { priceRanges } from "@/data/brands";
+const priceRangeItems = [
+  { price: "250", label: "Óculos até R$ 250,00" },
+  { price: "450", label: "Óculos de até R$ 450,00" },
+  { price: "650", label: "Óculos de até R$ 650,00" },
+  { price: "850", label: "Óculos de até R$ 850,00" },
+  { price: "1.500", label: "Óculos de até R$ 1.500" },
+];
 
 const PriceRangeSection = () => {
   return (
-    <section className="py-8 md:py-12">
+    <section className="py-8 md:py-12 bg-muted/50">
       <div className="container">
         <h2 className="text-xl md:text-2xl font-bold text-foreground uppercase tracking-wide text-center mb-8">
           Navegue por Faixas de Preço
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
-          {priceRanges.map((range) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          {priceRangeItems.map((range) => (
             <a
-              key={range.value}
+              key={range.price}
               href="#"
-              className="group relative overflow-hidden rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1"
-              style={{ backgroundColor: range.color }}
+              className="flex flex-col items-center gap-3 group"
             >
-              <p className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+              <div className="w-full aspect-square bg-[#8B1A1A] rounded-md flex flex-col items-start justify-end p-4 group-hover:scale-105 transition-transform shadow-md relative overflow-hidden">
+                <span className="text-yellow-400 text-xs font-semibold uppercase tracking-wider">
+                  Até
+                </span>
+                <div className="flex items-baseline gap-0.5">
+                  <span className="text-yellow-400 text-sm font-bold">R$</span>
+                  <span className="text-yellow-400 text-4xl md:text-5xl font-extrabold leading-none">
+                    {range.price}
+                  </span>
+                  <span className="text-yellow-400 text-sm font-bold">,00</span>
+                </div>
+              </div>
+              <p className="text-sm font-bold text-foreground text-center group-hover:text-primary transition-colors">
                 {range.label}
               </p>
-              <p className="text-xs text-muted-foreground mt-1">Ver produtos →</p>
             </a>
           ))}
         </div>
