@@ -19,11 +19,10 @@ const Footer = () => {
     <footer className="bg-foreground text-background/80">
       <div className="container py-10 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-10">
-          <FooterAccordion title="Óticas Diniz">
+          <FooterAccordion title="Visão Total Ótica">
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-background transition-colors">Quem Somos</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Nossas Lojas</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Seja um Franqueado</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Trabalhe Conosco</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Blog</a></li>
             </ul>
@@ -36,12 +35,11 @@ const Footer = () => {
               <li><a href="#" className="hover:text-background transition-colors">Política de Envio</a></li>
             </ul>
           </FooterAccordion>
-          <FooterAccordion title="Sua Conta">
+          <FooterAccordion title="Ajuda">
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-background transition-colors">Minha Conta</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Meus Pedidos</a></li>
+              <li><a href="#" className="hover:text-background transition-colors">Perguntas Frequentes</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Meus Favoritos</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Cadastre-se</a></li>
+              <li><a href="#" className="hover:text-background transition-colors">Fale Conosco</a></li>
             </ul>
           </FooterAccordion>
           <FooterAccordion title="Atendimento">
@@ -56,7 +54,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>atendimento@oticasdiniz.com.br</span>
+                <span>contato@visaototalótica.com.br</span>
               </div>
             </div>
           </FooterAccordion>
@@ -79,9 +77,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/10 mt-6 pt-6 text-center text-[11px] text-background/50 space-y-1">
-          <p>DINIZ FRANCHISING LTDA - CNPJ: 00.000.000/0001-00</p>
+          <p>VISÃO TOTAL ÓTICA LTDA - CNPJ: 00.000.000/0001-00</p>
           <p>Av. Exemplo, 1000 - Belo Horizonte/MG - CEP 30000-000</p>
-          <p>© {new Date().getFullYear()} Óticas Diniz. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Visão Total Ótica. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

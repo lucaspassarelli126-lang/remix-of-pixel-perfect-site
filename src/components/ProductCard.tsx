@@ -1,12 +1,19 @@
-import { Star, ShoppingCart } from "lucide-react";
+import { Star } from "lucide-react";
 import type { Product } from "@/data/products";
 
 interface ProductCardProps {
   product: Product;
 }
 
+const WHATSAPP_NUMBER = "5500000000000";
+
 const ProductCard = ({ product }: ProductCardProps) => {
   const salePrice = product.originalPrice * (1 - product.discountPercent / 100);
+
+  const whatsappMessage = encodeURIComponent(
+    `Olá! Gostaria de saber mais sobre: ${product.name} (${product.brand})`
+  );
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <div className="bg-background border border-border rounded-lg p-3 flex flex-col h-full group hover:shadow-lg transition-shadow">
@@ -69,14 +76,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-1.5 mt-3">
-        <button className="w-full bg-primary text-primary-foreground text-xs font-bold py-2 rounded hover:bg-primary/90 transition-colors">
-          Comprar com Grau
-        </button>
-        <button className="w-full border border-primary text-primary text-xs font-bold py-2 rounded hover:bg-primary/5 transition-colors flex items-center justify-center gap-1.5">
-          <ShoppingCart className="h-3.5 w-3.5" />
-          Adicionar
-        </button>
+      <div className="mt-3">
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-primary text-primary-foreground text-xs font-bold py-2 rounded hover:bg-primary/90 transition-colors flex items-center justify-center"
+        >
+          Saiba mais
+        </a>
       </div>
     </div>
   );
