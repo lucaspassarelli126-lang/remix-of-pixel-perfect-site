@@ -140,3 +140,17 @@ All colors MUST be HSL.
     animation: swipe-hint 2s infinite ease-in-out;
   }
 }
+
+/* Hide Lovable editor badge injected by preview server */
+[data-lovable-badge],
+#lovable-badge,
+.lovable-badge,
+[class*="lovable-"],
+[id*="lovable-"],
+iframe[src*="lovable"],
+div[style*="lovable"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
