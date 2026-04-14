@@ -30,7 +30,7 @@ const BrandsSection = () => {
               href="#" 
               className="flex flex-col items-center gap-2 group flex-shrink-0 snap-center"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border border-border flex items-center justify-center p-2.5 group-hover:scale-110 group-hover:border-primary/20 group-hover:shadow-lg transition-all shadow-sm overflow-hidden">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-[1.5px] border-primary/30 flex items-center justify-center p-2.5 group-hover:scale-110 group-hover:border-primary group-hover:shadow-lg transition-all shadow-sm overflow-hidden">
                 <img
                   src={brand.logo}
                   alt={brand.name}
