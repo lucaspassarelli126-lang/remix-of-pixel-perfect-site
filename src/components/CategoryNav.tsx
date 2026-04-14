@@ -1,4 +1,4 @@
-import { Glasses, Sun, Eye, Watch, Star, Sparkles } from "lucide-react";
+import { Glasses, Sun, Eye, Watch, Star, Sparkles, ChevronRight } from "lucide-react";
 
 const categories = [
   { name: "Armações", icon: Glasses, href: "#" },
@@ -36,10 +36,9 @@ const CategoryNav = () => {
               ))}
             </ul>
 
-            {/* Mobile Swipe Hint */}
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none md:hidden flex items-center gap-2 text-primary/40 animate-swipe-hint">
-              <span className="text-[8px] font-bold uppercase tracking-tighter">Deslize</span>
-              <Sparkles className="h-3 w-3" />
+            {/* Mobile Arrow Hint */}
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none md:hidden flex items-center text-primary/60 animate-swipe-hint">
+              <ChevronRight className="h-5 w-5" />
             </div>
           </div>
         </div>
