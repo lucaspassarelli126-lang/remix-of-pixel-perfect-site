@@ -132,4 +132,11 @@ All colors MUST be HSL.
   .animate-text-shine {
     animation: text-shine 3s linear infinite;
   }
+  @keyframes swipe-hint {
+    0%, 100% { transform: translateX(0); opacity: 0.2; }
+    50% { transform: translateX(10px); opacity: 0.8; }
+  }
+  .animate-swipe-hint {
+    animation: swipe-hint 2s infinite ease-in-out;
+  }
 }
