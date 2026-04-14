@@ -7,37 +7,37 @@ const SQRT_5000 = Math.sqrt(5000);
 const testimonials = [
   {
     tempId: 0,
-    testimonial: "A melhor ótica que já visitei. O atendimento é impecável e as armações são de altíssima qualidade. Recomendo para todos!",
+    testimonial: "Oi Visão Total! Queria agradecer, foi a melhor ótica que já visitei. O atendimento de vcs é impecável e as armações perfeitas 😍",
     by: "Mariana S., Arquiteta",
     imgSrc: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 1,
-    testimonial: "Comprei meus óculos de grau na Visão Total e a entrega foi super rápida. Enxergar bem com estilo não tem preço.",
+    testimonial: "Gente, meus óculos de grau acabaram de chegar! Entrega super rápida. Enxergar bem com estilo não tem preço hahaha 🤓",
     by: "Diego F., Engenheiro de Software",
     imgSrc: "https://images.unsplash.com/photo-1594819047050-99defca82545?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 2,
-    testimonial: "Sempre tive dificuldade em achar uma armação que combinasse com o meu rosto, mas a curadoria de estilo deles mudou tudo!",
+    testimonial: "Amei a curadoria de estilo que vcs fizeram pra mim! Sempre tive dificuldade de achar uma armação pro meu rosto, ficou perfeita 💖",
     by: "Camila R., Designer",
     imgSrc: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 3,
-    testimonial: "Os óculos de sol duram uma vida! Fiz minha primeira compra há 3 anos e continuam intactos. Qualidade nota mil.",
+    testimonial: "Pessoal, os óculos de sol de vcs duram uma vida! Fiz minha primeira compra há 3 anos e continuam intactos. Qualidade nota mil 💯",
     by: "Rafael M., Fotógrafo",
     imgSrc: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 4,
-    testimonial: "As lentes superaram minhas expectativas, especialmente para quem passa 10 horas por dia no computador como eu.",
+    testimonial: "As lentes superaram minhas expectativas, especialmente pra mim que passo 10h por dia no PC. Muito obg pelo cuidado! 🙏",
     by: "Amanda L., Copywriter",
     imgSrc: "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 5,
-    testimonial: "Simplesmente incrível! Sou cliente há anos e o padrão premium do serviço se mantém excelente. Não troco por nada.",
+    testimonial: "Simplesmente incrível! Sou cliente há anos e o padrão premium do serviço se mantém excelente. Não troco por nada 🚀",
     by: "Lucas P., Empreendedor",
     imgSrc: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&auto=format&fit=crop&q=80"
   }
@@ -57,58 +57,68 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   cardSize 
 }) => {
   const isCenter = position === 0;
+  const firstName = testimonial.by.split(' ')[0];
 
   return (
     <div
       onClick={() => handleMove(position)}
       className={cn(
-        "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out",
+        "absolute left-1/2 top-1/2 cursor-pointer transition-all duration-500 ease-in-out flex flex-col overflow-hidden rounded-2xl border border-border/50",
         isCenter 
-          ? "z-10 bg-primary text-primary-foreground border-primary" 
-          : "z-0 bg-card text-card-foreground border-border hover:border-primary/50"
+          ? "z-10 shadow-xl opacity-100 scale-100" 
+          : "z-0 shadow-md opacity-40 hover:opacity-70 scale-90 filter grayscale hover:grayscale-0"
       )}
       style={{
         width: cardSize,
         height: cardSize,
-        clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
         transform: `
           translate(-50%, -50%) 
           translateX(${(cardSize / 1.5) * position}px)
-          translateY(${isCenter ? -65 : position % 2 ? 15 : -15}px)
+          translateY(${isCenter ? -30 : position % 2 ? 15 : -15}px)
           rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)
-        `,
-        boxShadow: isCenter ? "0px 8px 0px 4px hsl(var(--border))" : "0px 0px 0px 0px transparent"
+        `
       }}
     >
-      <span
-        className="absolute block origin-top-right rotate-45 bg-border"
-        style={{
-          right: -2,
-          top: 48,
-          width: SQRT_5000,
-          height: 2
+      {/* WhatsApp Header */}
+      <div className="bg-[#075e54] px-4 py-3 flex items-center gap-3 shrink-0">
+        <img
+          src={testimonial.imgSrc}
+          alt={testimonial.by}
+          className="w-10 h-10 rounded-full object-cover border border-white/20"
+        />
+        <div className="flex flex-col">
+          <span className="text-white font-semibold text-sm md:text-base leading-tight">
+            {testimonial.by.split(',')[0]}
+          </span>
+          <span className="text-white/80 text-[11px] leading-tight mt-0.5">online</span>
+        </div>
+      </div>
+
+      {/* WhatsApp Chat Body */}
+      <div 
+        className="flex-1 p-3 md:p-4 bg-[#efeae2] flex flex-col gap-4 relative"
+        style={{ 
+          backgroundImage: 'url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png")', 
+          backgroundSize: 'cover', 
+          backgroundBlendMode: 'overlay' 
         }}
-      />
-      <img
-        src={testimonial.imgSrc}
-        alt={`${testimonial.by.split(',')[0]}`}
-        className="mb-4 h-14 w-14 rounded-full bg-muted object-cover"
-        style={{
-          boxShadow: isCenter ? "none" : "3px 3px 0px hsl(var(--background))"
-        }}
-      />
-      <h3 className={cn(
-        "text-base sm:text-lg font-medium leading-relaxed font-serif",
-        isCenter ? "text-primary-foreground" : "text-foreground"
-      )}>
-        "{testimonial.testimonial}"
-      </h3>
-      <p className={cn(
-        "absolute bottom-8 left-8 right-8 mt-2 text-sm italic font-medium tracking-wide",
-        isCenter ? "text-primary-foreground/80" : "text-muted-foreground"
-      )}>
-        - {testimonial.by}
-      </p>
+      >
+        {/* Store's Message */}
+        <div className="bg-[#dcf8c6] self-end p-2.5 rounded-lg text-[13px] md:text-sm text-gray-800 max-w-[85%] shadow-sm relative rounded-tr-none">
+           Oi {firstName}, tudo bem? O que achou da sua experiência conosco? 🥰
+           <span className="text-[10px] text-gray-500 float-right mt-2 ml-3 flex items-center gap-1">
+             14:30 <span className="text-[#53bdeb] font-bold tracking-tighter">✓✓</span>
+           </span>
+           <div className="absolute top-0 -right-2 w-0 h-0 border-[6px] border-transparent border-t-[#dcf8c6] border-l-[#dcf8c6]" />
+        </div>
+
+        {/* Client's Reply (Testimonial) */}
+        <div className="bg-white self-start p-3 rounded-lg text-[13px] md:text-sm text-gray-800 max-w-[90%] shadow-sm relative rounded-tl-none font-normal leading-relaxed">
+          {testimonial.testimonial}
+          <div className="text-[10px] text-gray-400 text-right mt-1.5">14:32</div>
+          <div className="absolute top-0 -left-2 w-0 h-0 border-[6px] border-transparent border-t-white border-r-white" />
+        </div>
+      </div>
     </div>
   );
 };
