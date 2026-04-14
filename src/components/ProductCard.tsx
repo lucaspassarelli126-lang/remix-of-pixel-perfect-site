@@ -30,6 +30,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
           src={product.imageUrl}
           alt={product.name}
           className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform"
+          loading="lazy"
+          decoding="async"
           onError={(e) => {
             (e.target as HTMLImageElement).src = "/placeholder.svg";
           }}
