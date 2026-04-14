@@ -14,7 +14,7 @@ const LensesSection = () => {
       <div className="absolute top-1/2 left-3/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-0" />
       
       <div className="container relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           <div className="flex-1 text-center lg:text-left space-y-8 md:space-y-10">
             <div className="space-y-4">
               <div className="flex items-center justify-center lg:justify-start gap-4">
@@ -67,7 +67,7 @@ const LensesSection = () => {
               </div>
               
               {/* Refined Certified Seal */}
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 md:p-8 rounded-full shadow-2xl border border-primary/5 flex flex-col items-center justify-center text-center w-32 h-32 md:w-40 md:h-40 group-hover:rotate-12 transition-transform duration-500">
+              <div className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-white p-4 md:p-8 rounded-full shadow-2xl border border-primary/5 flex flex-col items-center justify-center text-center w-28 h-28 md:w-40 md:h-40 group-hover:rotate-12 transition-transform duration-500">
                 <div className="absolute inset-2 border-[1px] border-dashed border-primary/20 rounded-full" />
                 <span className="text-[10px] uppercase tracking-widest text-primary/60 font-bold mb-1">Authentic</span>
                 <span className="text-lg md:text-xl font-serif italic text-primary font-bold">2026</span>

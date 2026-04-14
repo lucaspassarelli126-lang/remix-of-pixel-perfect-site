@@ -11,14 +11,14 @@ const categories = [
 
 const CategoryNav = () => {
   return (
-    <nav className="relative z-40 -mt-5 md:-mt-6 mb-4 md:mb-8">
+    <nav className="relative z-40 -mt-3 md:-mt-6 mb-4 md:mb-8">
       <div className="container px-4">
         <div className="mx-auto max-w-5xl">
-          <div className="bg-white/95 backdrop-blur-xl border border-white/30 shadow-[0_20px_50px_-10px_rgba(10,20,144,0.45)] rounded-full px-1 py-1 relative">
+          <div className="bg-white/95 backdrop-blur-xl border border-white/30 shadow-[0_20px_50px_-10px_rgba(10,20,144,0.45)] rounded-2xl md:rounded-full px-1 py-1 relative">
             {/* Intensive Neon Flash Accent */}
             <div className="absolute inset-x-4 -bottom-px h-[2px] bg-gradient-to-r from-transparent via-primary/80 to-transparent blur-[2px] z-20" />
             
-            <ul className="flex items-center justify-center gap-0.5 md:gap-1 overflow-x-auto no-scrollbar snap-x relative z-10">
+            <ul className="flex items-center justify-start md:justify-center gap-1 overflow-x-auto no-scrollbar snap-x relative z-10">
               {categories.map((cat) => (
                 <li key={cat.name} className="snap-center">
                   <a

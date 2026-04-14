@@ -41,9 +41,14 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Lado Direito: Favoritos */}
+        {/* Lado Direito: Ações */}
         <div className="flex-1 flex justify-end">
-          <div className="flex items-center gap-3 md:gap-5">
+          <div className="flex items-center gap-4 md:gap-5">
+            {/* Lupa Mobile */}
+            <button className="md:hidden text-white hover:opacity-80 transition-opacity p-1">
+              <Search className="h-6 w-6" />
+            </button>
+            
             <a href="#" className="flex flex-col items-center text-white hover:opacity-80 transition-opacity group">
               <div className="relative">
                 <Heart className="h-6 w-6 group-hover:fill-white transition-all" />
@@ -52,19 +57,6 @@ const Header = () => {
               <span className="text-[10px] mt-0.5 hidden md:block uppercase font-bold tracking-wider">Favoritos</span>
             </a>
           </div>
-        </div>
-      </div>
-
-      <div className="md:hidden px-4 pb-3">
-        <div className="relative w-full px-2">
-          <input
-            type="text"
-            placeholder="O que você está procurando?"
-            className="w-full border-none rounded-full py-2.5 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 bg-white/20 text-white placeholder:text-white/70"
-          />
-          <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-[#0A1490] rounded-full p-2">
-            <Search className="h-4 w-4" />
-          </button>
         </div>
       </div>
     </header>

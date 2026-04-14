@@ -65,18 +65,18 @@ const HeroBanner = () => {
 
       <button
         onClick={scrollPrev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 shadow-md hover:bg-background transition-colors z-20"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-1.5 md:p-2 shadow-md hover:bg-background transition-colors z-20"
       >
-        <ChevronLeft className="h-5 w-5 text-foreground" />
+        <ChevronLeft className="h-4 w-4 md:h-5 md:w-5 text-foreground" />
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 shadow-md hover:bg-background transition-colors z-20"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-1.5 md:p-2 shadow-md hover:bg-background transition-colors z-20"
       >
-        <ChevronRight className="h-5 w-5 text-foreground" />
+        <ChevronRight className="h-4 w-4 md:h-5 md:w-5 text-foreground" />
       </button>
 
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {banners.map((_, i) => (
           <button
             key={i}

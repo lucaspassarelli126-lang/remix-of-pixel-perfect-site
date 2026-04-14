@@ -19,12 +19,12 @@ const PriceRangeSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+        <div className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto no-scrollbar snap-x pb-4 -mx-4 px-4 md:mx-0 md:px-0">
           {priceRangeItems.map((range) => (
             <a
               key={range.price}
               href="#"
-              className="group relative"
+              className="group relative flex-shrink-0 w-[220px] md:w-auto snap-center"
             >
               <div className="w-full aspect-[5/3] rounded-xl p-4 md:p-5 flex flex-col justify-between overflow-hidden transition-all duration-300 bg-gradient-to-br from-[#0A1490] to-[#040842] shadow-md group-hover:shadow-lg border border-white/5 active:scale-95">
                 {/* Fixed Shine Effect */}
