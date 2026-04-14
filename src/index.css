@@ -153,6 +153,13 @@ All colors MUST be HSL.
   .animate-swipe-hint {
     animation: swipe-hint 2s infinite ease-in-out;
   }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
 }
 
 /* Hide Lovable editor badge injected by preview server */
