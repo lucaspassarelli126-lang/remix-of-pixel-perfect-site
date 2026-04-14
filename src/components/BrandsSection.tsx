@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import pradaLogo from "@/assets/brands/prada.png";
 import raybanLogo from "@/assets/brands/rayban.png";
 import vogueLogo from "@/assets/brands/vogue.png";
@@ -28,21 +29,34 @@ const BrandsSection = () => {
             <a 
               key={brand.name} 
               href="#" 
-              className="flex flex-col items-center gap-2 group flex-shrink-0 snap-center"
+              className="flex flex-col items-center gap-2 flex-shrink-0 snap-center"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-[1.5px] border-primary/30 flex items-center justify-center p-2.5 group-hover:scale-110 group-hover:border-primary group-hover:shadow-lg transition-all shadow-sm overflow-hidden">
+              <motion.div 
+                initial={{ scale: 1, borderColor: "rgba(10, 20, 144, 0.2)", opacity: 0.7 }}
+                whileHover={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1 }}
+                whileInView={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1 }}
+                viewport={{ margin: "0px -35% 0px -35%", amount: "some" }}
+                transition={{ duration: 0.3 }}
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-[1.5px] flex items-center justify-center p-2.5 shadow-sm overflow-hidden"
+              >
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                   width={80}
                   height={80}
                 />
-              </div>
-              <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-muted-foreground group-hover:text-primary transition-colors">
+              </motion.div>
+              <motion.span 
+                initial={{ color: "rgb(100, 116, 139)" }} // muted-foreground
+                whileHover={{ color: "rgba(10, 20, 144, 1)" }}
+                whileInView={{ color: "rgba(10, 20, 144, 1)" }}
+                viewport={{ margin: "0px -35% 0px -35%" }}
+                className="text-[10px] md:text-xs font-bold uppercase tracking-wider transition-colors"
+              >
                 {brand.name}
-              </span>
+              </motion.span>
             </a>
           ))}
         </div>
