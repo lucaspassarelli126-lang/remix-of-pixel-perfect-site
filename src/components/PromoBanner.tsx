@@ -15,34 +15,35 @@ const PromoBanner = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section className="py-10 md:py-16 overflow-hidden">
+    <section className="py-10 md:py-16">
       <div className="container max-w-7xl px-4">
         <a 
           ref={ref}
           href="#" 
-          className="block relative overflow-hidden rounded-[2rem] shadow-xl transition-shadow duration-1000 group hover:shadow-2xl"
-          style={{ height: 'auto', aspectRatio: '1920/430' }} // Ensuring fixed container aspect ratio for parallax to work within
+          className="block relative overflow-hidden rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow duration-700 bg-primary/5 group"
         >
-          {/* We scale the image to 120% so it has room to translate up and down without showing edges */}
-          <div className="hidden md:block absolute inset-0 -top-[20%] -bottom-[20%]">
+          {/* Desktop Version */}
+          <div className="hidden md:block w-full aspect-[1920/430] overflow-hidden relative">
             <motion.img 
               style={{ y }}
               src={promoDesktop} 
               alt="Verão - tendências de óculos" 
-              className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105" 
+              className="absolute -top-[15%] left-0 w-full h-[130%] object-cover transform transition-transform duration-1000 group-hover:scale-105" 
             />
           </div>
-          <div className="block md:hidden absolute inset-0 -top-[20%] -bottom-[20%]">
+          
+          {/* Mobile Version */}
+          <div className="block md:hidden w-full aspect-[1080/420] overflow-hidden relative">
             <motion.img 
-               style={{ y }}
+              style={{ y }}
               src={promoMobile} 
               alt="Verão - tendências de óculos" 
-              className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105" 
+              className="absolute -top-[15%] left-0 w-full h-[130%] object-cover transform transition-transform duration-1000 group-hover:scale-105" 
             />
           </div>
           
           {/* Subtle Overlay Glow */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
         </a>
       </div>
     </section>
