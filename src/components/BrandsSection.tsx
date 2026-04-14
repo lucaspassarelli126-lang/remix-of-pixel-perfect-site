@@ -23,20 +23,24 @@ const BrandsSection = () => {
         <h2 className="text-xl md:text-2xl font-bold text-foreground uppercase tracking-wide text-center mb-8">
           Explore por Marcas
         </h2>
-        <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
+        <div className="flex items-center justify-start md:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x pb-4 -mx-4 px-4 md:mx-0 md:px-0">
           {brandItems.map((brand) => (
-            <a key={brand.name} href="#" className="flex flex-col items-center gap-2 group">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border border-border flex items-center justify-center p-2.5 group-hover:scale-110 transition-transform shadow-md overflow-hidden">
+            <a 
+              key={brand.name} 
+              href="#" 
+              className="flex flex-col items-center gap-2 group flex-shrink-0 snap-center"
+            >
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border border-border flex items-center justify-center p-2.5 group-hover:scale-110 group-hover:border-primary/20 group-hover:shadow-lg transition-all shadow-sm overflow-hidden">
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                   width={80}
                   height={80}
                 />
               </div>
-              <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-muted-foreground group-hover:text-primary transition-colors">
                 {brand.name}
               </span>
             </a>
