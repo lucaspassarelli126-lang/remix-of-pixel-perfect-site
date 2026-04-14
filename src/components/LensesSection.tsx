@@ -2,13 +2,7 @@ import premiumModel from "@/assets/premium-model.webp";
 
 const LensesSection = () => {
   return (
-    <motion.section 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden py-20 md:py-32 bg-[#FAF9F6]"
-    >
+    <section className="animate-fade-in-section relative overflow-hidden py-20 md:py-32 bg-[#FAF9F6]">
       {/* Decorative Watermark Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none opacity-[0.03] z-0">
         <span className="text-[20rem] md:text-[35rem] font-black leading-none tracking-tight">
@@ -23,49 +17,25 @@ const LensesSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           <div className="flex-1 text-center lg:text-left space-y-8 md:space-y-10">
             <div className="space-y-4">
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="flex items-center justify-center lg:justify-start gap-4"
-              >
+              <div className="flex items-center justify-center lg:justify-start gap-4 animate-slide-in-left">
                 <div className="h-[1px] w-8 bg-primary/30" />
                 <span className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-primary/60 font-bold">
                   Curadoria de Estilo
                 </span>
-              </motion.div>
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-light text-[#1A1A1A] leading-[1.05] tracking-tight"
-              >
+              </div>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-[#1A1A1A] leading-[1.05] tracking-tight animate-slide-up">
                 A moldura <span className="font-serif italic font-medium text-primary/90">ideal</span> <br className="hidden md:block" />
                 para o seu olhar
-              </motion.h2>
+              </h2>
             </div>
             
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-base md:text-xl text-muted-foreground/80 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium"
-            >
+            <p className="text-base md:text-xl text-muted-foreground/80 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium animate-slide-up delay-200">
               Sua visão é única. Descubra armações que não apenas vestem seu rosto, 
               mas elevam sua essência com o equilíbrio perfeito entre 
               sofisticação e conforto.
-            </motion.p>
+            </p>
             
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="pt-6"
-            >
+            <div className="pt-6 animate-slide-up delay-300">
               <a
                 href="#"
                 className="group relative inline-flex items-center gap-4 bg-[#1A1A1A] text-white px-12 py-5 rounded-full overflow-hidden transition-all hover:pr-16"
@@ -78,16 +48,10 @@ const LensesSection = () => {
                 </div>
                 <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
-            </motion.div>
+            </div>
           </div>
           
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex-1 w-full max-w-2xl group"
-          >
+          <div className="flex-1 w-full max-w-2xl group animate-scale-in">
             <div className="relative">
               {/* Asymmetrical Frame Effect */}
               <div className="absolute top-8 left-8 -right-8 -bottom-8 border-[1px] border-primary/20 rounded-2xl -z-10 transition-all duration-700 group-hover:top-4 group-hover:left-4" />
@@ -97,6 +61,10 @@ const LensesSection = () => {
                   src={premiumModel}
                   alt="Modelo usando óculos de luxo"
                   className="w-full h-auto object-cover transform transition-transform duration-1000 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={600}
                 />
                 {/* Image Lens Flare Effect */}
                 <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
@@ -116,12 +84,11 @@ const LensesSection = () => {
                 <div className="absolute w-full h-[1px] bg-primary/20" />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
 export default LensesSection;
-
