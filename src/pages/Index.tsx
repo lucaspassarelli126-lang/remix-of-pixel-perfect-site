@@ -7,6 +7,7 @@ import BrandsSection from "@/components/BrandsSection";
 import PriceRangeSection from "@/components/PriceRangeSection";
 import PromoBanner from "@/components/PromoBanner";
 import LensesSection from "@/components/LensesSection";
+import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -40,6 +41,8 @@ const Index = () => {
         />
 
         <LensesSection />
+        
+        <StaggerTestimonials />
 
         <Newsletter />
       </main>
