@@ -36,9 +36,9 @@ const CategoryNav = () => {
               ))}
             </ul>
 
-            {/* Mobile Arrow Hint */}
-            <div className="absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none md:hidden flex items-center text-primary/40 animate-swipe-hint">
-              <ChevronRight className="h-4 w-4" />
+            {/* Mobile Arrow Hint with Fade effect */}
+            <div className="absolute right-0 top-0 bottom-0 w-12 pointer-events-none md:hidden flex items-center justify-end pr-1.5 rounded-r-2xl bg-gradient-to-l from-white/95 via-white/40 to-transparent z-20">
+              <ChevronRight className="h-4 w-4 text-primary animate-swipe-hint" />
             </div>
           </div>
         </div>
