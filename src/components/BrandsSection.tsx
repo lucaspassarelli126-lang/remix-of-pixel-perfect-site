@@ -32,10 +32,10 @@ const BrandsSection = () => {
               className="flex flex-col items-center gap-2 flex-shrink-0 snap-center"
             >
               <motion.div 
-                initial={{ scale: 1, borderColor: "rgba(10, 20, 144, 0.2)", opacity: 0.7 }}
-                whileHover={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1 }}
-                whileInView={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1 }}
-                viewport={{ margin: "0px -35% 0px -35%", amount: "some" }}
+                initial={{ scale: 1, borderColor: "rgba(10, 20, 144, 0.1)", opacity: 0.5, filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1, filter: "grayscale(0%)" }}
+                whileInView={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1, filter: "grayscale(0%)" }}
+                viewport={{ margin: "0px -45% 0px -45%", amount: "some" }}
                 transition={{ duration: 0.3 }}
                 className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-[1.5px] flex items-center justify-center p-2.5 shadow-sm overflow-hidden"
               >
@@ -49,10 +49,10 @@ const BrandsSection = () => {
                 />
               </motion.div>
               <motion.span 
-                initial={{ color: "rgb(100, 116, 139)" }} // muted-foreground
+                initial={{ color: "rgb(148, 163, 184)" }} // Mais apagado (slate-400)
                 whileHover={{ color: "rgba(10, 20, 144, 1)" }}
                 whileInView={{ color: "rgba(10, 20, 144, 1)" }}
-                viewport={{ margin: "0px -35% 0px -35%" }}
+                viewport={{ margin: "0px -45% 0px -45%" }}
                 className="text-[10px] md:text-xs font-bold uppercase tracking-wider transition-colors"
               >
                 {brand.name}
