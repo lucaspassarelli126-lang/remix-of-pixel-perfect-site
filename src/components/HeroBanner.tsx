@@ -40,7 +40,7 @@ const HeroBanner = () => {
     <section className="relative">
       <div ref={emblaRef} className="overflow-hidden">
         <div className="flex">
-          {banners.map((banner) => (
+          {banners.map((banner, index) => (
             <div key={banner.id} className="flex-[0_0_100%] min-w-0">
               {/* Desktop */}
               <div className="hidden md:block aspect-[1920/430]">
@@ -48,6 +48,9 @@ const HeroBanner = () => {
                   src={banner.desktop}
                   alt={banner.alt}
                   className="w-full h-full object-cover"
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding={index === 0 ? "sync" : "async"}
                 />
               </div>
               {/* Mobile */}
@@ -56,6 +59,9 @@ const HeroBanner = () => {
                   src={banner.mobile}
                   alt={banner.alt}
                   className="w-full h-full object-cover"
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding={index === 0 ? "sync" : "async"}
                 />
               </div>
             </div>
