@@ -116,6 +116,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 export const StaggerTestimonials: React.FC = () => {
   const [cardSize, setCardSize] = useState(365);
   const [testimonialsList, setTestimonialsList] = useState(testimonials);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMove = (steps: number) => {
     const newList = [...testimonialsList];
@@ -146,6 +147,16 @@ export const StaggerTestimonials: React.FC = () => {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
+  useEffect(() => {
+    if (isHovered) return;
+    
+    const interval = setInterval(() => {
+      handleMove(1);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, [testimonialsList, isHovered]);
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-[#FAF9F6] to-white">
       <div className="container mb-8 md:mb-12">
@@ -156,6 +167,10 @@ export const StaggerTestimonials: React.FC = () => {
       <div
         className="relative w-full overflow-hidden"
         style={{ height: 500 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={() => setIsHovered(true)}
+        onTouchEnd={() => setIsHovered(false)}
       >
         {testimonialsList.map((testimonial, index) => {
           const position = testimonialsList.length % 2
@@ -171,7 +186,7 @@ export const StaggerTestimonials: React.FC = () => {
             />
           );
         })}
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-3">
+        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-3 z-20">
           <button
             onClick={() => handleMove(-1)}
             className={cn(
