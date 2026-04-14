@@ -76,13 +76,13 @@ const HeroBanner = () => {
         <ChevronRight className="h-4 w-4 md:h-5 md:w-5 text-foreground" />
       </button>
 
-      <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
         {banners.map((_, i) => (
           <button
             key={i}
             onClick={() => scrollTo(i)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              i === selectedIndex ? "bg-background" : "bg-background/40"
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              i === selectedIndex ? "bg-white scale-125" : "bg-white/30"
             }`}
           />
         ))}
