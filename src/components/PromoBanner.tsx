@@ -1,5 +1,5 @@
-import promoDesktop from "@/assets/promo-desktop.png";
-import promoMobile from "@/assets/promo-mobile.png";
+import promoDesktop from "@/assets/promo-desktop.webp";
+import promoMobile from "@/assets/promo-mobile.webp";
 
 const PromoBanner = () => {
   return (

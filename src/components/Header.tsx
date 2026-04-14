@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Search, Heart } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import SearchComponent from "@/components/ui/animated-glowing-search-bar";
 
 const Header = () => {

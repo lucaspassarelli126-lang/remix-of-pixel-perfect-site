@@ -1,5 +1,4 @@
-import premiumModel from "@/assets/premium-model.png";
-import { motion } from "framer-motion";
+import premiumModel from "@/assets/premium-model.webp";
 
 const LensesSection = () => {
   return (
