@@ -11,21 +11,21 @@ const categories = [
 
 const CategoryNav = () => {
   return (
-    <nav className="relative z-40 -mt-6 md:-mt-8 mb-4 md:mb-8">
+    <nav className="relative z-40 -mt-5 md:-mt-6 mb-4 md:mb-8">
       <div className="container px-4">
-        <div className="mx-auto max-w-5xl">
-          <div className="bg-white/80 backdrop-blur-xl border border-white/20 shadow-[0_15px_35px_rgba(0,0,0,0.1)] rounded-2xl md:rounded-full px-2 py-2 overflow-hidden">
-            <ul className="flex items-center justify-between gap-1 overflow-x-auto no-scrollbar snap-x snap-mandatory">
+        <div className="mx-auto max-w-4xl">
+          <div className="bg-white/90 backdrop-blur-xl border border-white/20 shadow-lg rounded-full px-1.5 py-1">
+            <ul className="flex items-center justify-between overflow-x-auto no-scrollbar snap-x">
               {categories.map((cat) => (
-                <li key={cat.name} className="snap-center">
+                <li key={cat.name} className="flex-1 min-w-fit">
                   <a
                     href={cat.href}
-                    className="group flex flex-col md:flex-row items-center gap-2 px-4 md:px-6 py-3 rounded-xl md:rounded-full transition-all duration-300 hover:bg-primary/5 whitespace-nowrap"
+                    className="group flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-full transition-all duration-300 hover:bg-primary/5 whitespace-nowrap"
                   >
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-muted/30 group-hover:bg-primary/10 transition-colors duration-300">
-                      <cat.icon className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
+                    <div className="flex items-center justify-center w-6 h-6 rounded-full bg-muted/20 group-hover:bg-primary/10 transition-colors">
+                      <cat.icon className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary transition-all duration-300" />
                     </div>
-                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground group-hover:text-primary transition-colors">
+                    <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
                       {cat.name}
                     </span>
                   </a>

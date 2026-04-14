@@ -112,6 +112,13 @@ All colors MUST be HSL.
   .animate-bounce-slow {
     animation: bounce-slow 4s infinite ease-in-out;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   @keyframes shine {
     100% { left: 125%; }
   }
