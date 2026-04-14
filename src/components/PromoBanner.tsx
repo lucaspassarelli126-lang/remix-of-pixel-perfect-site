@@ -14,6 +14,10 @@ const PromoBanner = () => {
             src={promoDesktop} 
             alt="Verão - tendências de óculos" 
             className="hidden md:block w-full h-auto object-cover transform transition-transform duration-1000 group-hover:scale-105" 
+            loading="lazy"
+            decoding="async"
+            width={1920}
+            height={600}
           />
           
           {/* Mobile Version */}
@@ -21,6 +25,10 @@ const PromoBanner = () => {
             src={promoMobile} 
             alt="Verão - tendências de óculos" 
             className="block md:hidden w-full h-auto object-cover transform transition-transform duration-1000 group-hover:scale-105" 
+            loading="lazy"
+            decoding="async"
+            width={1080}
+            height={420}
           />
           
           {/* Subtle Overlay Glow */}
