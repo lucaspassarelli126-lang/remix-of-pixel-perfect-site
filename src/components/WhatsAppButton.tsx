@@ -9,17 +9,22 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
+import { motion } from "framer-motion";
+
 const WhatsAppButton = () => {
   return (
-    <a
+    <motion.a
       href="https://wa.me/5519995864431"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-full p-3.5 md:p-4 shadow-[0_8px_30px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 group"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-full p-3.5 md:p-4 shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-shadow duration-300 group"
       aria-label="Fale conosco no WhatsApp"
+      whileHover={{ scale: 1.15 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <WhatsAppIcon className="h-7 w-7 md:h-8 md:w-8 group-hover:rotate-12 transition-transform duration-300" />
-    </a>
+    </motion.a>
   );
 };
 
