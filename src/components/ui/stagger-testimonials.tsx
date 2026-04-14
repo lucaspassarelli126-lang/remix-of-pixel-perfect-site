@@ -9,37 +9,37 @@ const testimonials = [
     tempId: 0,
     testimonial: "A melhor ótica que já visitei. O atendimento é impecável e as armações são de altíssima qualidade. Recomendo para todos!",
     by: "Mariana S., Arquiteta",
-    imgSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&auto=format&fit=crop&q=80"
+    imgSrc: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 1,
     testimonial: "Comprei meus óculos de grau na Visão Total e a entrega foi super rápida. Enxergar bem com estilo não tem preço.",
     by: "Diego F., Engenheiro de Software",
-    imgSrc: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&auto=format&fit=crop&q=80"
+    imgSrc: "https://images.unsplash.com/photo-1594819047050-99defca82545?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 2,
     testimonial: "Sempre tive dificuldade em achar uma armação que combinasse com o meu rosto, mas a curadoria de estilo deles mudou tudo!",
     by: "Camila R., Designer",
-    imgSrc: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&auto=format&fit=crop&q=80"
+    imgSrc: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 3,
     testimonial: "Os óculos de sol duram uma vida! Fiz minha primeira compra há 3 anos e continuam intactos. Qualidade nota mil.",
     by: "Rafael M., Fotógrafo",
-    imgSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&auto=format&fit=crop&q=80"
+    imgSrc: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 4,
     testimonial: "As lentes superaram minhas expectativas, especialmente para quem passa 10 horas por dia no computador como eu.",
     by: "Amanda L., Copywriter",
-    imgSrc: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&auto=format&fit=crop&q=80"
+    imgSrc: "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=150&h=150&auto=format&fit=crop&q=80"
   },
   {
     tempId: 5,
     testimonial: "Simplesmente incrível! Sou cliente há anos e o padrão premium do serviço se mantém excelente. Não troco por nada.",
     by: "Lucas P., Empreendedor",
-    imgSrc: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&auto=format&fit=crop&q=80"
+    imgSrc: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&auto=format&fit=crop&q=80"
   }
 ];
 
