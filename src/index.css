@@ -112,4 +112,10 @@ All colors MUST be HSL.
   .animate-bounce-slow {
     animation: bounce-slow 4s infinite ease-in-out;
   }
+  @keyframes shine {
+    100% { left: 125%; }
+  }
+  .animate-shine {
+    animation: shine 0.8s ease-in-out forwards;
+  }
 }
