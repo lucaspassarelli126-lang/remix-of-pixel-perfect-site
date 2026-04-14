@@ -45,21 +45,22 @@ const SearchComponent = () => {
             name="text" 
             className="bg-[#0A1490]/80 backdrop-blur-md border border-white/10 w-full h-[52px] rounded-lg text-white px-[48px] md:px-[59px] text-sm md:text-base focus:outline-none placeholder-white/60 transition-all shadow-inner" 
           />
-          <div id="input-mask" className="pointer-events-none w-[60px] h-[20px] absolute bg-gradient-to-r from-transparent to-[#0A1490] top-[16px] left-[60px] group-focus-within:hidden"></div>
-          <div id="pink-mask" className="pointer-events-none w-[30px] h-[20px] absolute bg-[#cf30aa] top-[10px] left-[5px] blur-2xl opacity-80 transition-all duration-2000 group-hover:opacity-0"></div>
           <div className="absolute h-[38px] w-[38px] overflow-hidden top-[7px] right-[7px] rounded-lg
                           before:absolute before:content-[''] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-90
                           before:bg-[conic-gradient(rgba(0,0,0,0),#3d3a4f,rgba(0,0,0,0)_50%,rgba(0,0,0,0)_50%,#3d3a4f,rgba(0,0,0,0)_100%)]
                           before:brightness-135 before:animate-[spin_4s_linear_infinite]">
           </div>
           <div id="filter-icon" className="absolute top-2 right-2 flex items-center justify-center z-[2] max-h-9 max-w-[34px] h-full w-full [isolation:isolate] overflow-hidden rounded-lg bg-gradient-to-b from-[#161329] via-black to-[#1d1b4b] border border-transparent cursor-pointer hover:scale-105 transition-transform text-white/80">
-             {/* Replace with Lucide Search to match the site's aesthetics, but keep original filter shape if they want */}
              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </div>
-          <div id="search-icon" className="absolute left-4 md:left-5 top-[14px]">
-            {/* Added standard search icon for visual balance */}
-             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#searchl)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+          <div id="search-icon" className="absolute left-4 md:left-5 top-[15px]">
+            {/* Ícone de Óculos (Glasses) com gradiente neon importado da biblioteca original */}
+             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#searchl)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="6" cy="15" r="4"/>
+              <circle cx="18" cy="15" r="4"/>
+              <path d="M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/>
+              <path d="M2.5 13 5 7c.7-1.3 1.4-2 3-2"/>
+              <path d="M21.5 13 19 7c-.7-1.3-1.5-2-3-2"/>
               <defs>
                  <linearGradient id="searchl">
                   <stop stopColor="#b6a9b7" offset="0%"></stop>
