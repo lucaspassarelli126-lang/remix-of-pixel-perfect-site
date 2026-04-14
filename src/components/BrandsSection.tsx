@@ -24,7 +24,7 @@ const BrandsSection = () => {
         <h2 className="text-xl md:text-2xl font-bold text-foreground uppercase tracking-wide text-center mb-8">
           Explore por Marcas
         </h2>
-        <div className="flex items-center justify-start md:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x pb-4 -mx-4 px-4 md:mx-0 md:px-0">
+        <div className="flex items-center justify-start md:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 px-[calc(50vw-45px)] md:px-0">
           {brandItems.map((brand) => (
             <a 
               key={brand.name} 
