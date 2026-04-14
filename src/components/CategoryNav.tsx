@@ -28,7 +28,7 @@ const CategoryNav = () => {
                     <div className="flex items-center justify-center w-6 h-6 rounded-full bg-muted/20 group-hover:bg-primary/10 transition-colors">
                       <cat.icon className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary transition-all duration-300" />
                     </div>
-                    <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-muted-foreground group-hover:text-primary transition-colors">
+                    <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-muted-foreground group-hover:text-primary transition-colors bg-[linear-gradient(110deg,#64748b,45%,#fff,55%,#64748b)] bg-[length:200%_100%] bg-clip-text text-transparent animate-text-shine">
                       {cat.name}
                     </span>
                   </a>
