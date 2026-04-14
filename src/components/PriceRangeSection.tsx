@@ -1,3 +1,6 @@
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 const priceRangeItems = [
   { price: "250", tier: "Essencial", subtitle: "Qualidade Básica" },
   { price: "450", tier: "Estilo", subtitle: "Fashion & Trendy" },
@@ -7,6 +10,18 @@ const priceRangeItems = [
 ];
 
 const PriceRangeSection = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 240;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className="py-10 md:py-16 bg-muted/30">
       <div className="container px-4">
@@ -19,13 +34,32 @@ const PriceRangeSection = () => {
           </p>
         </div>
 
-        <div className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto no-scrollbar snap-x pb-4 -mx-4 px-4 md:mx-0 md:px-0">
-          {priceRangeItems.map((range) => (
-            <a
-              key={range.price}
-              href="#"
-              className="group relative flex-shrink-0 w-[220px] md:w-auto snap-center"
-            >
+        <div className="relative group/nav">
+          {/* Mobile Arrows */}
+          <button 
+            onClick={() => scroll("left")}
+            className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-20 bg-white/90 shadow-lg rounded-full p-2 text-[#0A1490] hover:bg-white transition-all active:scale-90"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          
+          <button 
+            onClick={() => scroll("right")}
+            className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-20 bg-white/90 shadow-lg rounded-full p-2 text-[#0A1490] hover:bg-white transition-all active:scale-90"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          <div 
+            ref={scrollRef}
+            className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto no-scrollbar snap-x pb-4 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth"
+          >
+            {priceRangeItems.map((range) => (
+              <a
+                key={range.price}
+                href="#"
+                className="group relative flex-shrink-0 w-[220px] md:w-auto snap-center"
+              >
               <div className="w-full aspect-[5/3] rounded-xl p-4 md:p-5 flex flex-col justify-between overflow-hidden transition-all duration-300 bg-gradient-to-br from-[#0A1490] to-[#040842] shadow-md group-hover:shadow-lg border border-white/5 active:scale-95">
                 {/* Fixed Shine Effect */}
                 <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine" />
