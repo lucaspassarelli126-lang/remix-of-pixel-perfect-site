@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Search, Heart } from "lucide-react";
 import logo from "@/assets/logo.png";
+import SearchComponent from "@/components/ui/animated-glowing-search-bar";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,18 +29,9 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Centro: Barra de Pesquisa */}
-          <div className="flex-[2] max-w-xl hidden md:flex justify-center">
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder="O que você está procurando?"
-                className="w-full border-none rounded-full py-2.5 px-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 bg-white/20 text-white placeholder:text-white/70"
-              />
-              <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-white text-[#0A1490] rounded-full p-2 hover:scale-105 transition-transform">
-                <Search className="h-4 w-4" />
-              </button>
-            </div>
+          {/* Centro: Barra de Pesquisa Animada */}
+          <div className="flex-[2] max-w-xl hidden md:flex justify-center shrink-0">
+            <SearchComponent />
           </div>
 
           {/* Lado Direito: Ações */}
