@@ -60,40 +60,41 @@ const PriceRangeSection = () => {
                 href="#"
                 className="group relative flex-shrink-0 w-[220px] md:w-auto snap-center"
               >
-              <div className="w-full aspect-[5/3] rounded-xl p-4 md:p-5 flex flex-col justify-between overflow-hidden transition-all duration-300 bg-gradient-to-br from-[#0A1490] to-[#040842] shadow-md group-hover:shadow-lg border border-white/5 active:scale-95">
-                {/* Fixed Shine Effect */}
-                <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine" />
+                <div className="w-full aspect-[5/3] rounded-xl p-4 md:p-5 flex flex-col justify-between overflow-hidden transition-all duration-300 bg-gradient-to-br from-[#0A1490] to-[#040842] shadow-md group-hover:shadow-lg border border-white/5 active:scale-95">
+                  {/* Fixed Shine Effect */}
+                  <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine" />
 
-                <div className="relative z-10">
-                  <h3 className="text-white text-sm md:text-base font-bold tracking-tight leading-tight">
-                    {range.tier}
-                  </h3>
-                  <p className="text-white/40 text-[9px] md:text-[10px] uppercase tracking-wider">
-                    {range.subtitle}
-                  </p>
-                </div>
-
-                <div className="relative z-10">
-                  <span className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest block -mb-0.5">
-                    Até
-                  </span>
-                  <div className="flex items-baseline">
-                    <span className="text-[#D4AF37] text-xs font-bold mr-0.5">R$</span>
-                    <span className="text-white text-2xl md:text-3xl font-black leading-none tracking-tighter">
-                      {range.price.split('.')[0]}
-                    </span>
-                    {range.price.includes('.') && (
-                      <span className="text-white text-base font-bold">.{range.price.split('.')[1]}</span>
-                    )}
-                    <span className="text-[#D4AF37] text-[10px] font-bold ml-0.5">,00</span>
+                  <div className="relative z-10">
+                    <h3 className="text-white text-sm md:text-base font-bold tracking-tight leading-tight">
+                      {range.tier}
+                    </h3>
+                    <p className="text-white/40 text-[9px] md:text-[10px] uppercase tracking-wider">
+                      {range.subtitle}
+                    </p>
                   </div>
-                </div>
 
-                {/* Simplified Hover Indicator */}
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </a>
-          ))}
+                  <div className="relative z-10">
+                    <span className="text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest block -mb-0.5">
+                      Até
+                    </span>
+                    <div className="flex items-baseline">
+                      <span className="text-[#D4AF37] text-xs font-bold mr-0.5">R$</span>
+                      <span className="text-white text-2xl md:text-3xl font-black leading-none tracking-tighter">
+                        {range.price.split('.')[0]}
+                      </span>
+                      {range.price.includes('.') && (
+                        <span className="text-white text-base font-bold">.{range.price.split('.')[1]}</span>
+                      )}
+                      <span className="text-[#D4AF37] text-[10px] font-bold ml-0.5">,00</span>
+                    </div>
+                  </div>
+
+                  {/* Simplified Hover Indicator */}
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
