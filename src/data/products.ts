@@ -1,13 +1,13 @@
-import product1Img from "@/assets/products/product-1.png";
-import product2Img from "@/assets/products/product-2.png";
-import product3Img from "@/assets/products/product-3.png";
-import product4Img from "@/assets/products/product-4.png";
-import product5Img from "@/assets/products/product-5.png";
-import product6Img from "@/assets/products/product-6.png";
-import productRb1Img from "@/assets/products/product-rb1.png";
-import productRb2Img from "@/assets/products/product-rb2.png";
-import productRb3Img from "@/assets/products/product-rb3.png";
-import productRb4Img from "@/assets/products/product-rb4.png";
+import product1Img from "@/assets/products/product-1.webp";
+import product2Img from "@/assets/products/product-2.webp";
+import product3Img from "@/assets/products/product-3.webp";
+import product4Img from "@/assets/products/product-4.webp";
+import product5Img from "@/assets/products/product-5.webp";
+import product6Img from "@/assets/products/product-6.webp";
+import productRb1Img from "@/assets/products/product-rb1.webp";
+import productRb2Img from "@/assets/products/product-rb2.webp";
+import productRb3Img from "@/assets/products/product-rb3.webp";
+import productRb4Img from "@/assets/products/product-rb4.webp";
 
 export interface Product {
   id: string;

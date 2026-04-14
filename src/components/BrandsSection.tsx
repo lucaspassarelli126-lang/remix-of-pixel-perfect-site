@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
-import pradaLogo from "@/assets/brands/prada.png";
-import raybanLogo from "@/assets/brands/rayban.png";
-import vogueLogo from "@/assets/brands/vogue.png";
-import miumiuLogo from "@/assets/brands/miumiu.png";
-import guessLogo from "@/assets/brands/guess.png";
-import diiLogo from "@/assets/brands/dii-collection.png";
-import hitLogo from "@/assets/brands/hit-eyewear.png";
+import pradaLogo from "@/assets/brands/prada.webp";
+import raybanLogo from "@/assets/brands/rayban.webp";
+import vogueLogo from "@/assets/brands/vogue.webp";
+import miumiuLogo from "@/assets/brands/miumiu.webp";
+import guessLogo from "@/assets/brands/guess.webp";
+import diiLogo from "@/assets/brands/dii-collection.webp";
+import hitLogo from "@/assets/brands/hit-eyewear.webp";
 
 const brandItems = [
   { name: "Prada", logo: pradaLogo },
@@ -29,34 +28,22 @@ const BrandsSection = () => {
             <a 
               key={brand.name} 
               href="#" 
-              className="flex flex-col items-center gap-2 flex-shrink-0 snap-center"
+              className="flex flex-col items-center gap-2 flex-shrink-0 snap-center group"
             >
-              <motion.div 
-                initial={{ scale: 1, borderColor: "rgba(10, 20, 144, 0.1)", opacity: 0.5, filter: "grayscale(100%)" }}
-                whileHover={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1, filter: "grayscale(0%)" }}
-                whileInView={{ scale: 1.1, borderColor: "rgba(10, 20, 144, 1)", opacity: 1, filter: "grayscale(0%)" }}
-                viewport={{ margin: "0px -45% 0px -45%", amount: "some" }}
-                transition={{ duration: 0.3 }}
-                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-[1.5px] flex items-center justify-center p-2.5 shadow-sm overflow-hidden"
-              >
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-[1.5px] border-primary/10 flex items-center justify-center p-2.5 shadow-sm overflow-hidden opacity-50 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 group-hover:border-primary">
                 <img
                   src={brand.logo}
                   alt={brand.name}
                   className="w-full h-full object-contain"
                   loading="lazy"
+                  decoding="async"
                   width={80}
                   height={80}
                 />
-              </motion.div>
-              <motion.span 
-                initial={{ color: "rgb(148, 163, 184)" }} // Mais apagado (slate-400)
-                whileHover={{ color: "rgba(10, 20, 144, 1)" }}
-                whileInView={{ color: "rgba(10, 20, 144, 1)" }}
-                viewport={{ margin: "0px -45% 0px -45%" }}
-                className="text-[10px] md:text-xs font-bold uppercase tracking-wider transition-colors"
-              >
+              </div>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-muted-foreground transition-colors duration-300 group-hover:text-primary">
                 {brand.name}
-              </motion.span>
+              </span>
             </a>
           ))}
         </div>

@@ -3,12 +3,12 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import banner1Desktop from "@/assets/banners/banner1-desktop.png";
-import banner1Mobile from "@/assets/banners/banner1-mobile.png";
-import banner2Desktop from "@/assets/banners/banner2-desktop.png";
-import banner2Mobile from "@/assets/banners/banner2-mobile.png";
-import banner3Desktop from "@/assets/banners/banner3-desktop.png";
-import banner3Mobile from "@/assets/banners/banner3-mobile.png";
+import banner1Desktop from "@/assets/banners/banner1-desktop.webp";
+import banner1Mobile from "@/assets/banners/banner1-mobile.webp";
+import banner2Desktop from "@/assets/banners/banner2-desktop.webp";
+import banner2Mobile from "@/assets/banners/banner2-mobile.webp";
+import banner3Desktop from "@/assets/banners/banner3-desktop.webp";
+import banner3Mobile from "@/assets/banners/banner3-mobile.webp";
 
 const banners = [
   { id: 1, desktop: banner1Desktop, mobile: banner1Mobile, alt: "Catálogo de Óculos" },
@@ -51,6 +51,8 @@ const HeroBanner = () => {
                   fetchPriority={index === 0 ? "high" : "auto"}
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding={index === 0 ? "sync" : "async"}
+                  width={1920}
+                  height={430}
                 />
               </div>
               {/* Mobile */}
@@ -62,6 +64,8 @@ const HeroBanner = () => {
                   fetchPriority={index === 0 ? "high" : "auto"}
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding={index === 0 ? "sync" : "async"}
+                  width={1080}
+                  height={420}
                 />
               </div>
             </div>

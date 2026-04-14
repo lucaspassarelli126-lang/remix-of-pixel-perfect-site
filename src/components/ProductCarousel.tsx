@@ -1,7 +1,6 @@
 import { useCallback, useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import type { Product } from "@/data/products";
 
@@ -37,13 +36,7 @@ const ProductCarousel = ({ title, products }: ProductCarouselProps) => {
   }, [emblaApi]);
 
   return (
-    <motion.section 
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="py-8 md:py-12"
-    >
+    <section className="py-8 md:py-12 animate-fade-in-section">
       <div className="container">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl md:text-2xl font-bold text-foreground uppercase tracking-wide">
@@ -80,7 +73,7 @@ const ProductCarousel = ({ title, products }: ProductCarouselProps) => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
