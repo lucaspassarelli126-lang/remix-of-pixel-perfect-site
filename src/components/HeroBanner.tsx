@@ -76,7 +76,7 @@ const HeroBanner = () => {
         <ChevronRight className="h-5 w-5 text-foreground" />
       </button>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {banners.map((_, i) => (
           <button
             key={i}
