@@ -35,6 +35,12 @@ const CategoryNav = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Mobile Swipe Hint */}
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none md:hidden flex items-center gap-2 text-primary/40 animate-swipe-hint">
+              <span className="text-[8px] font-bold uppercase tracking-tighter">Deslize</span>
+              <Sparkles className="h-3 w-3" />
+            </div>
           </div>
         </div>
       </div>
