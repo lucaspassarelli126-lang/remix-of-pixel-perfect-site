@@ -43,7 +43,7 @@ const SearchComponent = () => {
             placeholder="O que você está procurando?" 
             type="text" 
             name="text" 
-            className="bg-[#0A1490]/80 backdrop-blur-md border border-white/10 w-full h-[52px] rounded-lg text-white px-[48px] md:px-[59px] text-sm md:text-base focus:outline-none placeholder-white/60 transition-all shadow-inner" 
+            className="bg-[#0A1490]/80 backdrop-blur-md border border-white/10 w-full h-[52px] rounded-lg text-white pl-[44px] pr-[52px] md:pl-[50px] md:pr-[54px] text-[13px] md:text-sm focus:outline-none placeholder-white/60 transition-all shadow-inner" 
           />
           <div className="absolute h-[38px] w-[38px] overflow-hidden top-[7px] right-[7px] rounded-lg
                           before:absolute before:content-[''] before:w-[600px] before:h-[600px] before:bg-no-repeat before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-90
@@ -53,9 +53,9 @@ const SearchComponent = () => {
           <div id="filter-icon" className="absolute top-2 right-2 flex items-center justify-center z-[2] max-h-9 max-w-[34px] h-full w-full [isolation:isolate] overflow-hidden rounded-lg bg-gradient-to-b from-[#161329] via-black to-[#1d1b4b] border border-transparent cursor-pointer hover:scale-105 transition-transform text-white/80">
              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </div>
-          <div id="search-icon" className="absolute left-4 md:left-5 top-[15px]">
+          <div id="search-icon" className="absolute left-3 md:left-4 top-[15px]">
             {/* Ícone de Óculos (Glasses) com gradiente neon importado da biblioteca original */}
-             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#searchl)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#searchl)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="6" cy="15" r="4"/>
               <circle cx="18" cy="15" r="4"/>
               <path d="M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/>
